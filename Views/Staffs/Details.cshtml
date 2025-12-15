@@ -1,0 +1,38 @@
+﻿@model PJ_P_Installation_Management_System.Models.Staff
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-header bg-info text-white rounded-top-4">
+            <h4 class="mb-0">Staff Details</h4>
+        </div>
+        <div class="card-body p-4">
+            <dl class="row">
+                <dt class="col-sm-3 fw-bold">Full Name</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.FullName)</dd>
+
+                <dt class="col-sm-3 fw-bold">Position</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Position)</dd>
+
+                <dt class="col-sm-3 fw-bold">Gender</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Gender)</dd>
+
+                <dt class="col-sm-3 fw-bold">Location</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Location)</dd>
+
+                <dt class="col-sm-3 fw-bold">Contact Number</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.ContactNumber)</dd>
+
+                <dt class="col-sm-3 fw-bold">Email</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Email)</dd>
+            </dl>
+        </div>
+        <div class="card-footer d-flex justify-content-between">
+            <a asp-action="Index" class="btn btn-outline-secondary rounded-3">Back to List</a>
+            <a asp-action="Edit" asp-route-id="@Model?.StaffId" class="btn btn-primary rounded-3">Edit Staff</a>
+        </div>
+    </div>
+</div>

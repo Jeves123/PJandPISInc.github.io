@@ -1,0 +1,369 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\PJ_P Installation Management System.bundle.scp.css",
+      "PackagePath": "staticwebassets\\PJ_P Installation Management System.lhzkr4u5jn.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\Images\\logo.jpg",
+      "PackagePath": "staticwebassets\\Images\\logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\css\\account.css",
+      "PackagePath": "staticwebassets\\css\\account.css"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\jquery\\dist\\jquery.slim.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.js"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.map"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\uploads\\1032af09-a33f-4180-b633-5b6fda59a7ce.jpg",
+      "PackagePath": "staticwebassets\\uploads\\1032af09-a33f-4180-b633-5b6fda59a7ce.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\uploads\\1bd5a4c8-0e1e-4626-af20-2579cdedb891.jpg",
+      "PackagePath": "staticwebassets\\uploads\\1bd5a4c8-0e1e-4626-af20-2579cdedb891.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\uploads\\1da1696f-b804-455b-93f2-9cf6b698ecb7.jpg",
+      "PackagePath": "staticwebassets\\uploads\\1da1696f-b804-455b-93f2-9cf6b698ecb7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\uploads\\1ed79727-f199-4773-971c-0ed55eb9e411.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\1ed79727-f199-4773-971c-0ed55eb9e411.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\uploads\\24bb99f9-13e0-4848-aafb-801ca990238b.jpg",
+      "PackagePath": "staticwebassets\\uploads\\24bb99f9-13e0-4848-aafb-801ca990238b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\uploads\\474a4f7f-921f-49d8-b3bb-b75c7e4ac584.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\474a4f7f-921f-49d8-b3bb-b75c7e4ac584.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\uploads\\597b1f14-4188-4235-8834-f427793cf1da.jpg",
+      "PackagePath": "staticwebassets\\uploads\\597b1f14-4188-4235-8834-f427793cf1da.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\uploads\\5b6ab752-bb62-479c-aa2a-400806caa6df.jpg",
+      "PackagePath": "staticwebassets\\uploads\\5b6ab752-bb62-479c-aa2a-400806caa6df.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\uploads\\5f2209ab-689b-47b2-9f93-16f75fb4b4fb_541275897_1137578551574354_6389130944814537565_n.jpg",
+      "PackagePath": "staticwebassets\\uploads\\5f2209ab-689b-47b2-9f93-16f75fb4b4fb_541275897_1137578551574354_6389130944814537565_n.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\uploads\\6c1c8da2-a3e3-455c-a3ea-8b0097514d16.jpg",
+      "PackagePath": "staticwebassets\\uploads\\6c1c8da2-a3e3-455c-a3ea-8b0097514d16.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\uploads\\8733b151-a517-4dca-91ca-dc5817b2860b.jpg",
+      "PackagePath": "staticwebassets\\uploads\\8733b151-a517-4dca-91ca-dc5817b2860b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\uploads\\92825afa-b25d-4c67-b9b6-abfc6baba7b5.jpg",
+      "PackagePath": "staticwebassets\\uploads\\92825afa-b25d-4c67-b9b6-abfc6baba7b5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\uploads\\9611b6a3-a1bb-4efc-8fdc-5868af068801.jpg",
+      "PackagePath": "staticwebassets\\uploads\\9611b6a3-a1bb-4efc-8fdc-5868af068801.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\uploads\\a203d1f8-2ce3-42d0-a3fe-07b000735329.jpg",
+      "PackagePath": "staticwebassets\\uploads\\a203d1f8-2ce3-42d0-a3fe-07b000735329.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\uploads\\aa94c844-044c-4f40-913a-ea46e676bbbe.jpg",
+      "PackagePath": "staticwebassets\\uploads\\aa94c844-044c-4f40-913a-ea46e676bbbe.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\uploads\\afdc4422-ae2a-4b87-a05e-733f1c32caf2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\afdc4422-ae2a-4b87-a05e-733f1c32caf2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\uploads\\b616ddc1-f92c-4a71-ae1b-1ee48526a388.jpg",
+      "PackagePath": "staticwebassets\\uploads\\b616ddc1-f92c-4a71-ae1b-1ee48526a388.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\uploads\\ca7c0aab-18d5-4ac4-b9e0-2b01ffd00abb.jpg",
+      "PackagePath": "staticwebassets\\uploads\\ca7c0aab-18d5-4ac4-b9e0-2b01ffd00abb.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\uploads\\eb72aab9-699a-405b-b42e-d960ef5abed2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\eb72aab9-699a-405b-b42e-d960ef5abed2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jeves dayday\\Downloads\\login\\PJ_P Installation Management System\\PJ_P Installation Management System\\wwwroot\\uploads\\f153e8f9-894b-4008-a9ea-9f2d33175da9.jpg",
+      "PackagePath": "staticwebassets\\uploads\\f153e8f9-894b-4008-a9ea-9f2d33175da9.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.PJ_P Installation Management System.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.PJ_P Installation Management System.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.PJ_P Installation Management System.props",
+      "PackagePath": "build\\PJ_P Installation Management System.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.PJ_P Installation Management System.props",
+      "PackagePath": "buildMultiTargeting\\PJ_P Installation Management System.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.PJ_P Installation Management System.props",
+      "PackagePath": "buildTransitive\\PJ_P Installation Management System.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,65 @@
+﻿@model PJ_P_Installation_Management_System.Models.Product
+
+@{
+    ViewData["Title"] = "Product Details";
+    var ps = Model.ProductSuppliers?.FirstOrDefault();
+}
+
+<div class="container mt-4">
+    <div class="card shadow rounded-4 border-0">
+        <div class="card-body p-4 p-md-5">
+            <h2 class="mb-4 text-primary">
+                <i class="bi bi-box"></i> Product Details
+            </h2>
+
+            <dl class="row mb-4">
+                <dt class="col-sm-3 fw-bold">Product ID</dt>
+                <dd class="col-sm-9">@Model.ProductId</dd>
+
+                <dt class="col-sm-3 fw-bold">Name</dt>
+                <dd class="col-sm-9">@Model.Name</dd>
+
+                <dt class="col-sm-3 fw-bold">Description</dt>
+                <dd class="col-sm-9">@Model.Description</dd>
+
+                <dt class="col-sm-3 fw-bold">Unit</dt>
+                <dd class="col-sm-9">@Model.Unit</dd>
+
+                <dt class="col-sm-3 fw-bold">Price</dt>
+                <dd class="col-sm-9">
+                    @if (ps != null)
+                    {
+                        @ps.Price.ToString("N2")
+                    }
+                    else
+                    {
+                        <span class="text-muted">No price</span>
+                    }
+                </dd>
+
+                <dt class="col-sm-3 fw-bold">Supplier</dt>
+                <dd class="col-sm-9">
+                    @if (ps != null)
+                    {
+                        @ps.Supplier.CompanyName
+                    }
+                    else
+                    {
+                        <span class="text-muted">No supplier</span>
+                    }
+                </dd>
+            </dl>
+
+            <div class="d-flex">
+                <a asp-action="Edit" asp-route-id="@Model.ProductId"
+                   class="btn btn-warning me-2 rounded-pill px-4">
+                    <i class="bi bi-pencil"></i> Edit
+                </a>
+                <a asp-action="Index"
+                   class="btn btn-outline-secondary rounded-pill px-4">
+                    <i class="bi bi-arrow-left"></i> Back to List
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

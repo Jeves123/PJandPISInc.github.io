@@ -1,0 +1,18 @@
+﻿@model PJ_P_Installation_Management_System.ViewModel.InstallationViewModel
+
+@{
+    ViewData["Title"] = "Update Installation Status";
+}
+
+<div class="container">
+    <h3>Update Installation Status for @Model.CustomerProject</h3>
+    <form asp-action="EditStatus" method="post">
+        <input type="hidden" asp-for="CustomerPurchaseId" />
+        <div class="mb-3">
+            <label>Installation Status</label>
+            <select asp-for="InstallationStatus" class="form-select" asp-items="ViewBag.StatusOptions"></select>
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

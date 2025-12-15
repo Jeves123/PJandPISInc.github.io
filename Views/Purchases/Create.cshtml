@@ -1,0 +1,215 @@
+﻿@model PJ_P_Installation_Management_System.Models.Purchase
+
+@{
+    ViewData["Title"] = "Create Purchase";
+}
+
+<div class="container mt-4">
+    <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-body p-4 p-md-5">
+
+            <!-- Title -->
+            <h2 class="mb-4 text-primary fw-bold">
+                <i class="bi bi-cart-plus"></i> New Purchase
+            </h2>
+
+            <form asp-action="Create" method="post">
+
+                <!-- Supplier -->
+                <div class="mb-4">
+                    <label asp-for="SupplierId" class="form-label fw-bold">Supplier</label>
+                    <select asp-for="SupplierId" class="form-select shadow-sm" asp-items="ViewBag.SupplierId" required>
+                        <option value="">-- Select Supplier --</option>
+                    </select>
+                    <span asp-validation-for="SupplierId" class="text-danger"></span>
+                </div>
+
+                <!-- Purchase Items Section -->
+                <hr class="my-4 d-none" id="itemsDivider" />
+                <h4 class="mb-3 text-secondary fw-semibold d-none" id="itemsTitle">
+                    <i class="bi bi-basket"></i> Purchase Items
+                </h4>
+
+                <!-- Items container -->
+                <div id="purchaseItemsContainer" class="d-none"></div>
+
+                <!-- Pagination -->
+                <div id="paginationControls" class="d-flex justify-content-end mt-3 d-none"></div>
+
+                <!-- Add Item Button -->
+                <div class="mb-4">
+                    <button type="button" class="btn btn-outline-primary rounded-pill shadow-sm" id="addItem" disabled>
+                        <i class="bi bi-plus-circle"></i> Add Item
+                    </button>
+                </div>
+
+                <!-- Submit & Back -->
+                <div class="d-flex justify-content-between mt-4">
+                    <a asp-action="Index" class="btn btn-secondary px-4 rounded-pill shadow-sm">
+                        <i class="bi bi-arrow-left-circle"></i> Back
+                    </a>
+                    <button type="submit" class="btn btn-success px-4 rounded-pill shadow-sm" id="submitBtn">
+                        <i class="bi bi-check-circle"></i> Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        const supplierSelect = document.getElementById("SupplierId");
+        const addItemBtn = document.getElementById("addItem");
+        const container = document.getElementById("purchaseItemsContainer");
+        const divider = document.getElementById("itemsDivider");
+        const title = document.getElementById("itemsTitle");
+        const paginationControls = document.getElementById("paginationControls");
+
+        const productsUrl = '@Url.Action("GetBySupplier", "Purchases")';
+
+        let allItems = [];
+        let currentPage = 1;
+        const pageSize = 5;
+
+        // Supplier change
+        supplierSelect.addEventListener("change", function () {
+            const supplierId = this.value;
+            allItems = [];
+            currentPage = 1;
+            container.innerHTML = "";
+            paginationControls.innerHTML = "";
+            addItemBtn.disabled = true;
+            hideItemsSection();
+
+            if (supplierId) {
+                fetch(`${productsUrl}?supplierId=${encodeURIComponent(supplierId)}`)
+                    .then(res => res.json())
+                    .then(products => {
+                        if (products && products.length > 0) {
+                            showItemsSection();
+                            addItemRow(products);
+                            addItemBtn.disabled = false;
+                        }
+                    });
+            }
+        });
+
+        // Add Item Button
+        addItemBtn.addEventListener("click", function () {
+            const supplierId = supplierSelect.value;
+            if (!supplierId) return;
+
+            fetch(`${productsUrl}?supplierId=${encodeURIComponent(supplierId)}`)
+                .then(res => res.json())
+                .then(products => addItemRow(products));
+        });
+
+        // Create Row
+        function addItemRow(products) {
+            const rowIndex = allItems.length;
+            const descriptions = [...new Set(products.map(p => p.description))];
+
+            const row = document.createElement("div");
+            row.classList.add("purchase-item", "row", "g-3", "align-items-end", "mb-3");
+
+            row.innerHTML = `
+                <div class="col-md-4">
+                    <label class="form-label">Category</label>
+                    <select class="form-select description-select" required>
+                        <option value="">-- Select Category --</option>
+                        ${descriptions.map(d => `<option value="${d}">${d}</option>`).join("")}
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Product</label>
+                    <select name="productIds[${rowIndex}]" class="form-select product-select" required disabled>
+                        <option value="">-- Select Product --</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label class="form-label">Quantity</label>
+                    <input name="quantities[${rowIndex}]" type="number" class="form-control" min="1" value="1" required />
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-outline-danger w-100 remove-item">
+                        <i class="bi bi-trash3"></i> Remove
+                    </button>
+                </div>
+            `;
+
+            const descSelect = row.querySelector(".description-select");
+            const productSelect = row.querySelector(".product-select");
+
+            descSelect.addEventListener("change", function () {
+                const selectedDesc = this.value;
+                productSelect.innerHTML = `<option value="">-- Select Product --</option>`;
+
+                if (selectedDesc) {
+                    const filtered = products.filter(p => p.description === selectedDesc);
+                    filtered.forEach(p => {
+                        const opt = document.createElement("option");
+                        opt.value = p.productId;
+                        opt.textContent = p.name;
+                        productSelect.appendChild(opt);
+                    });
+                    productSelect.disabled = false;
+                } else {
+                    productSelect.disabled = true;
+                }
+            });
+
+            row.querySelector(".remove-item").addEventListener("click", function () {
+                const index = allItems.indexOf(row);
+                if (index > -1) {
+                    allItems.splice(index, 1);
+                    renderPage(currentPage);
+                }
+                if (allItems.length === 0) hideItemsSection();
+            });
+
+            allItems.push(row);
+            renderPage(currentPage);
+        }
+
+        // Pagination
+        function renderPage(page) {
+            currentPage = page;
+            container.innerHTML = "";
+            const start = (page - 1) * pageSize;
+            const end = start + pageSize;
+            allItems.slice(start, end).forEach(item => container.appendChild(item));
+            renderPagination();
+        }
+
+        function renderPagination() {
+            paginationControls.classList.remove("d-none");
+            const totalPages = Math.ceil(allItems.length / pageSize) || 1;
+            let html = `<nav><ul class="pagination pagination-sm mb-0">`;
+            for (let i = 1; i <= totalPages; i++) {
+                html += `
+                    <li class="page-item ${i === currentPage ? 'active' : ''}">
+                        <a class="page-link" href="javascript:void(0)" onclick="renderPage(${i})">${i}</a>
+                    </li>`;
+            }
+            html += `</ul></nav>`;
+            paginationControls.innerHTML = html;
+        }
+
+        function showItemsSection() {
+            container.classList.remove("d-none");
+            divider.classList.remove("d-none");
+            title.classList.remove("d-none");
+        }
+
+        function hideItemsSection() {
+            container.classList.add("d-none");
+            divider.classList.add("d-none");
+            title.classList.add("d-none");
+            paginationControls.classList.add("d-none");
+        }
+
+        window.renderPage = renderPage;
+    </script>
+}

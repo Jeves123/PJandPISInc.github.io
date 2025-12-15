@@ -1,0 +1,141 @@
+﻿@model PJ_P_Installation_Management_System.ViewModel.DashboardViewModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container mt-4">
+    <h2 class="fw-bold mb-4 text-success">
+        <i class="bi bi-speedometer2 me-2"></i> PJ&P International Service Inc. Dashboard
+    </h2>
+
+    <div class="row g-4">
+        <!-- Suppliers -->
+        <div class="col-md-3">
+            <div class="card shadow border-0 rounded-3 dashboard-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-truck display-5 text-success"></i>
+                    <h5 class="card-title mt-2">Suppliers</h5>
+                    <p class="display-6 fw-bold text-success">@Model.TotalSuppliers</p>
+                    <a href="@Url.Action("Index", "Suppliers")" class="btn btn-outline-success w-100 rounded-pill">
+                        View Suppliers
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Products -->
+        <div class="col-md-3">
+            <div class="card shadow border-0 rounded-3 dashboard-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-box-seam display-5 text-success"></i>
+                    <h5 class="card-title mt-2">Products</h5>
+                    <p class="display-6 fw-bold text-dark">@Model.TotalProducts</p>
+                    <a href="@Url.Action("Index", "Products")" class="btn btn-outline-success w-100 rounded-pill">
+                        View Products
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Purchases -->
+        <div class="col-md-3">
+            <div class="card shadow border-0 rounded-3 dashboard-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-cart-check display-5 text-success"></i>
+                    <h5 class="card-title mt-2">Purchases</h5>
+                    <p class="display-6 fw-bold text-dark">@Model.TotalPurchases</p>
+                    <a href="@Url.Action("Index", "Purchases")" class="btn btn-outline-success w-100 rounded-pill">
+                        View Purchases
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Customer Purchases -->
+        <div class="col-md-3">
+            <div class="card shadow border-0 rounded-3 dashboard-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-person-check display-5 text-success"></i>
+                    <h5 class="card-title mt-2">Customer Purchases</h5>
+                    <p class="display-6 fw-bold text-dark">@Model.TotalCustomerPurchases</p>
+                    <a href="@Url.Action("Index", "CustomerPurchases")" class="btn btn-outline-success w-100 rounded-pill">
+                        View Customer Purchases
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Staff -->
+        <div class="col-md-3">
+            <div class="card shadow border-0 rounded-3 dashboard-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-people display-5 text-success"></i>
+                    <h5 class="card-title mt-2">Staff</h5>
+                    <p class="display-6 fw-bold text-dark">@Model.TotalStaff</p>
+                    <a href="@Url.Action("Index", "Staffs")" class="btn btn-outline-success w-100 rounded-pill">
+                        View Staff
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Schedules -->
+        <div class="col-md-3">
+            <div class="card shadow border-0 rounded-3 dashboard-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-calendar-check display-5 text-success"></i>
+                    <h5 class="card-title mt-2">Schedules</h5>
+                    <p class="display-6 fw-bold text-dark">@Model.TotalSchedules</p>
+                    <a href="@Url.Action("Index", "Schedules")" class="btn btn-outline-success w-100 rounded-pill">
+                        View Schedules
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Installations -->
+        <div class="col-md-3">
+            <div class="card shadow border-0 rounded-3 dashboard-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-hammer display-5 text-success"></i>
+                    <h5 class="card-title mt-2">Installations</h5>
+                    <p class="display-6 fw-bold text-dark">@Model.TotalInstallations</p>
+                    <a href="@Url.Action("Index", "Installations")" class="btn btn-outline-success w-100 rounded-pill">
+                        View Installations
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reports -->
+        <div class="col-md-3">
+            <div class="card shadow border-0 rounded-3 dashboard-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-bar-chart-line display-5 text-success"></i>
+                    <h5 class="card-title mt-2">Reports</h5>
+                    <p class="display-6 fw-bold">📑</p>
+                    <a href="@Url.Action("Inventory", "Reports")" class="btn btn-outline-success w-100 mb-2 rounded-pill">
+                        Inventory Report
+                    </a>
+                    <a href="@Url.Action("Financial", "Reports")" class="btn btn-outline-success w-100 rounded-pill">
+                        Financial Report
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap Icons CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<style>
+    .dashboard-card {
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+    }
+
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+</style>

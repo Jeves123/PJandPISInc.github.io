@@ -1,0 +1,128 @@
+﻿@model PJ_P_Installation_Management_System.Models.CustomerPurchase
+
+@{
+    ViewData["Title"] = "Customer Purchase Details";
+    var productTotal = Model.CustomerPurchaseItems.Sum(i => i.Price * i.Quantity);
+    var laborFee = Model.LaborFeeAmount ?? 0;
+    var grandTotal = productTotal + laborFee;
+}
+
+<div class="container mt-3" style="max-width:820px;">
+    <div class="card shadow-sm rounded-3 border-0">
+        <div class="card-body p-3">
+            <!-- Header -->
+            <h5 class="mb-3 text-primary fw-bold">
+                <i class="bi bi-receipt-cutoff"></i> Purchase Details
+            </h5>
+
+            <!-- Details -->
+            <dl class="row small mb-2">
+                <dt class="col-5 fw-semibold text-secondary">Purchase Order</dt>
+                <dd class="col-7">@Html.DisplayFor(m => m.OrderId)</dd>
+
+                <dt class="col-5 fw-semibold text-secondary">Customer / Project</dt>
+                <dd class="col-7">@Html.DisplayFor(m => m.CustomerProject)</dd>
+
+                <dt class="col-5 fw-semibold text-secondary">Purchase Date</dt>
+                <dd class="col-7">@Model.PurchaseDate.ToString("yyyy-MM-dd")</dd>
+
+                <dt class="col-5 fw-semibold text-secondary">Installation</dt>
+                <dd class="col-7">
+                    @if (Model.Status?.Equals("Installation", StringComparison.OrdinalIgnoreCase) == true ||
+                    Model.Status?.Equals("With Installation", StringComparison.OrdinalIgnoreCase) == true)
+                    {
+                        <span class="badge bg-info text-dark">With Installation</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-warning text-dark">Without Installation</span>
+                    }
+                </dd>
+
+                @if ((Model.Status?.Equals("Installation", StringComparison.OrdinalIgnoreCase) == true ||
+                Model.Status?.Equals("With Installation", StringComparison.OrdinalIgnoreCase) == true)
+                && Model.InstallationDate.HasValue)
+                {
+                    <dt class="col-5 fw-semibold text-secondary">Installation Location</dt>
+                    <dd class="col-7">@Model.InstallationLocation</dd>
+
+                    <dt class="col-5 fw-semibold text-secondary">Installation Date</dt>
+                    <dd class="col-7">@Model.InstallationDate.Value.ToString("yyyy-MM-dd")</dd>
+
+                    @if (Model.InstallationEndDate.HasValue)
+                    {
+                        <dt class="col-5 fw-semibold text-secondary">Installation End Date</dt>
+                        <dd class="col-7">@Model.InstallationEndDate.Value.ToString("yyyy-MM-dd")</dd>
+                    }
+                }
+            </dl>
+
+
+            <!-- Products + Labor Fee + Grand Total Table -->
+            <h6 class="mt-3 mb-2 text-primary fw-bold">
+                <i class="bi bi-box-seam"></i> Products
+            </h6>
+            <div class="table-responsive">
+                <table class="table table-sm table-bordered table-hover align-middle mb-0">
+                    <thead class="table-light small">
+                        <tr>
+                            <th>Category</th>
+                            <th>Product</th>
+                            <th class="text-end">Price</th>
+                            <th class="text-center">Qty</th>
+                            <th class="text-end">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody class="small">
+                        @foreach (var item in Model.CustomerPurchaseItems)
+                        {
+                            <tr>
+                                <td>@item.Product.Description</td>
+                                <td>@item.Product.Name</td>
+                                <td class="text-end">@item.Price.ToString("C")</td>
+                                <td class="text-center">@item.Quantity</td>
+                                <td class="text-end">@((item.Price * item.Quantity).ToString("C"))</td>
+                            </tr>
+                        }
+
+                        @* Add Labor Fee row if with installation *@
+                        @if (Model.Status?.Equals("Installation", StringComparison.OrdinalIgnoreCase) == true ||
+                        Model.Status?.Equals("With Installation", StringComparison.OrdinalIgnoreCase) == true)
+                        {
+                            <tr>
+                                <td colspan="3" class="text-end fw-bold">Labor Fee</td>
+                                <td class="text-end">@((Model.LaborFeeAmount ?? 0).ToString("C"))</td>
+                            </tr>
+                        }
+
+                        @* Grand Total row *@
+                        <tr class="table-primary fw-bold">
+                            <td colspan="3" class="text-end">Grand Total</td>
+                            <td class="text-end">@grandTotal.ToString("C")</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+           
+
+
+            <!-- Actions -->
+            <div class="d-flex justify-content-between mt-3">
+                <a asp-action="Index" class="btn btn-outline-secondary btn-sm rounded-pill px-3">
+                    <i class="bi bi-arrow-left-circle"></i> Back
+                </a>
+
+                @if (Model.Status?.Equals("Installation", StringComparison.OrdinalIgnoreCase) == true ||
+                Model.Status?.Equals("With Installation", StringComparison.OrdinalIgnoreCase) == true)
+                {
+                    <a asp-controller="Schedules" asp-action="AssignStaff"
+                       asp-route-purchaseId="@Model.CustomerPurchaseId"
+                       class="btn btn-primary btn-sm rounded-pill px-3">
+                        <i class="bi bi-person-check"></i> Assign Staff
+                    </a>
+                }
+            </div>
+
+        </div>
+    </div>
+</div>

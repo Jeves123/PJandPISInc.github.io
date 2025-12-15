@@ -1,0 +1,165 @@
+﻿@model IEnumerable<PJ_P_Installation_Management_System.ViewModel.InstallationViewModel>
+
+@{
+    ViewData["Title"] = "Installations";
+    int pageSize = 5;
+    int currentPage = ViewBag.CurrentPage ?? 1;
+    int totalPages = ViewBag.TotalPages ?? 1;
+}
+
+<div class="container-fluid">
+    <form asp-action="Index" method="get" class="mb-3">
+        <div class="input-group input-group-sm" style="max-width: 300px;">
+            <input type="text" name="searchString" value="@ViewBag.SearchString"
+                   class="form-control" placeholder="Search installations..." />
+            <button type="submit" class="btn btn-outline-secondary">
+                <i class="bi bi-search"></i>
+            </button>
+        </div>
+    </form>
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Purchase Order</th>
+                            <th>Customer / Project</th>
+                            <th>Installation Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.OrderId</td>
+                                <td>@item.CustomerProject</td>
+                                <td>
+                                    <span class="badge @(item.InstallationStatus == "Pending" ? "bg-secondary" :
+                                     item.InstallationStatus == "Ongoing" ? "bg-warning text-dark" :
+                                     item.InstallationStatus == "Completed" ? "bg-success" :
+                                     "bg-light text-dark")">
+                                        @item.InstallationStatus
+                                    </span>
+                                </td>
+                                <td>
+                                    <a asp-action="EditStatus" asp-route-id="@item.CustomerPurchaseId" class="btn btn-sm btn-primary">
+                                        Update Status
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+
+
+
+                </table>
+
+
+
+                <!-- Pagination -->
+                <div class="d-flex justify-content-end mt-3">
+                    <nav aria-label="Installation pagination">
+                        <ul class="pagination mb-0">
+                            <li class="page-item @(currentPage == 1 ? "disabled" : "")">
+                                <a class="page-link"
+                                   asp-action="Index"
+                                   asp-route-pageNumber="@(currentPage - 1)"
+                                   asp-route-searchString="@ViewBag.SearchString">Previous</a>
+                            </li>
+
+                            @for (int i = 1; i <= totalPages; i++)
+                            {
+                                <li class="page-item @(i == currentPage ? "active" : "")">
+                                    <a class="page-link"
+                                       asp-action="Index"
+                                       asp-route-pageNumber="@i"
+                                       asp-route-searchString="@ViewBag.SearchString">@i</a>
+                                </li>
+                            }
+
+                            <li class="page-item @(currentPage == totalPages ? "disabled" : "")">
+                                <a class="page-link"
+                                   asp-action="Index"
+                                   asp-route-pageNumber="@(currentPage + 1)"
+                                   asp-route-searchString="@ViewBag.SearchString">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .table {
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+        .table th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: 500;
+        }
+
+    .table-hover tbody tr:hover {
+        background-color: rgba(76, 175, 80, 0.1);
+    }
+
+    .btn-group .btn {
+        margin-right: 5px;
+        border-radius: 4px;
+        font-size: 0.85rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+        .btn-group .btn:last-child {
+            margin-right: 0;
+        }
+
+    .btn-info {
+        background-color: #17a2b8;
+        border-color: #17a2b8;
+    }
+
+    .btn-warning {
+        background-color: #ffc107;
+        border-color: #ffc107;
+        color: #212529;
+    }
+
+    .btn-danger {
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }
+
+    .btn-success {
+        background-color: #28a745;
+        border-color: #28a745;
+    }
+
+    .card {
+        border-radius: 8px;
+        border: none;
+    }
+
+    .card-body {
+        padding: 1.5rem;
+    }
+
+    .bi {
+        margin-right: 4px;
+    }
+
+    .badge {
+        font-size: 0.85rem;
+        padding: 0.4em 0.7em;
+        border-radius: 0.35rem;
+    }
+
+</style>

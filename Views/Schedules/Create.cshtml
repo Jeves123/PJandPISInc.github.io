@@ -1,0 +1,64 @@
+﻿@model Schedule
+
+@{
+    ViewData["Title"] = "Create Schedule";
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+}
+
+<form asp-action="Create">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+    <div class="form-group">
+        <label asp-for="TaskDescription" class="control-label"></label>
+        <input asp-for="TaskDescription" class="form-control" />
+        <span asp-validation-for="TaskDescription" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Location" class="control-label"></label>
+        <input asp-for="Location" class="form-control" />
+        <span asp-validation-for="Location" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Date Range*</label>
+        <div class="d-flex gap-2">
+            <input type="date" class="form-control" name="scheduledDate" required />
+            <span class="align-self-center">-</span>
+            <input type="date" class="form-control" name="endDate" required />
+        </div>
+    </div>
+
+@*     <div class="form-group">
+        <label asp-for="Position" class="control-label"></label>
+        <select asp-for="Position" class="form-control" asp-items="ViewBag.Position">
+            <option value="">-- Select Position --</option>
+        </select>
+        <span asp-validation-for="StaffId" class="text-danger"></span>
+    </div> *@
+
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        flatpickr("#dateRange", {
+            mode: "range",
+            dateFormat: "m/d/Y",
+            onClose: function(selectedDates) {
+                if (selectedDates.length === 2) {
+                    document.getElementById("ScheduledDate").value = selectedDates[0].toISOString();
+                    document.getElementById("EndDate").value = selectedDates[1].toISOString();
+                }
+            }
+        });
+    </script>
+}

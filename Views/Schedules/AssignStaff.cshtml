@@ -1,0 +1,157 @@
+﻿@model PJ_P_Installation_Management_System.Models.Schedule
+
+@{
+    ViewData["Title"] = "Assign Staff";
+}
+
+<div class="container mt-4" style="max-width:900px;">
+    <div class="card shadow-lg border-0 rounded-3">
+        <div class="card-header bg-success text-white">
+            <h5 class="mb-0"><i class="bi bi-person-plus"></i> Assign Staff to Installation</h5>
+        </div>
+        <div class="card-body p-4">
+
+            <form asp-action="AssignStaff" method="post">
+                <input type="hidden" name="purchaseId" value="@ViewBag.PurchaseId" />
+
+                <!-- Display Information -->
+                <div class="row mb-3 text-muted small gx-3 gy-2">
+                    <div class="col-md-3">
+                        <strong>Customer / Project:</strong><br />@ViewBag.CustomerProject
+                    </div>
+                    <div class="col-md-3">
+                        <strong>Installation Date:</strong><br />@ViewBag.PurchaseDate
+                    </div>
+                    <div class="col-md-3">
+                        <strong>Installation End Date:</strong><br />@ViewBag.InstallationEndDate
+                    </div>
+                    <div class="col-md-3">
+                        <strong>Location:</strong><br />@ViewBag.PurchaseLocation
+                    </div>
+                </div>
+
+                <hr />
+
+                <!-- Staff Selectors -->
+                <div id="staffContainer">
+                    <div class="staffRow row g-2 mb-3 align-items-end">
+                        <div class="col-md-5">
+                            <label class="form-label fw-bold">Position</label>
+                            <select name="Position" class="form-select positionSelect">
+                                <option value="">-- Select Position --</option>
+                                @foreach (var pos in ViewBag.Positions as List<string>)
+                                {
+                                    <option value="@pos">@pos</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-5">
+                            <label class="form-label fw-bold">Staff</label>
+                            <select name="staffIds" class="form-select staffSelect">
+                                <option value="">-- Select Staff --</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2 text-center">
+                            <button type="button" class="btn btn-outline-danger btn-sm removeStaffBtn" title="Remove">
+                                <i class="bi bi-x-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add More Staff button -->
+                <div class="text-start mb-3">
+                    <button type="button" id="addStaffBtn" class="btn btn-outline-success btn-sm">
+                        <i class="bi bi-plus-circle"></i> Add More Staff
+                    </button>
+                </div>
+
+                <!-- Form Buttons -->
+                <div class="d-flex justify-content-end">
+                    <a asp-action="Index" class="btn btn-outline-secondary me-2">Cancel</a>
+                    <button type="submit" class="btn btn-success">
+                        <i class="bi bi-check-circle"></i> Assign
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div asp-validation-summary="All" class="text-danger mt-2"></div>
+</div>
+
+@section Scripts {
+    <script>
+        function loadStaff(positionSelect, staffSelect) {
+            let position = positionSelect.value;
+            if (!position) {
+                staffSelect.innerHTML = "<option value=''>-- Select Staff --</option>";
+                return;
+            }
+
+            staffSelect.innerHTML = "<option>Loading...</option>";
+
+            fetch(`/Schedules/GetStaffByPosition?position=${encodeURIComponent(position)}`)
+                .then(res => res.json())
+                .then(data => {
+                    staffSelect.innerHTML = "<option value=''>-- Select Staff --</option>";
+                    data.forEach(staff => {
+                        staffSelect.innerHTML += `<option value="${staff.staffId}">${staff.fullName}</option>`;
+                    });
+                });
+        }
+
+        // Attach event listeners for initial row
+        document.querySelectorAll(".positionSelect").forEach(posSelect => {
+            posSelect.addEventListener("change", function () {
+                loadStaff(this, this.closest(".staffRow").querySelector(".staffSelect"));
+            });
+        });
+
+        document.querySelectorAll(".removeStaffBtn").forEach(btn => {
+            btn.addEventListener("click", function () {
+                this.closest(".staffRow").remove();
+            });
+        });
+
+        // Add new staff row dynamically
+        document.getElementById("addStaffBtn").addEventListener("click", function () {
+            let staffContainer = document.getElementById("staffContainer");
+            let newRow = document.createElement("div");
+            newRow.classList.add("staffRow", "row", "g-2", "mb-3", "align-items-end");
+
+            newRow.innerHTML = `
+                <div class="col-md-5">
+                    <label class="form-label fw-bold">Position</label>
+                    <select name="Position" class="form-select positionSelect">
+                        <option value="">-- Select Position --</option>
+        @foreach (var pos in ViewBag.Positions as List<string>)
+        {
+                                <option value="@pos">@pos</option>
+        }
+                    </select>
+                </div>
+                <div class="col-md-5">
+                    <label class="form-label fw-bold">Staff</label>
+                    <select name="staffIds" class="form-select staffSelect">
+                        <option value="">-- Select Staff --</option>
+                    </select>
+                </div>
+                <div class="col-md-2 text-center">
+                    <button type="button" class="btn btn-outline-danger btn-sm removeStaffBtn" title="Remove">
+                        <i class="bi bi-x-circle"></i>
+                    </button>
+                </div>
+            `;
+            staffContainer.appendChild(newRow);
+
+            // Attach events to new row
+            newRow.querySelector(".positionSelect").addEventListener("change", function () {
+                loadStaff(this, newRow.querySelector(".staffSelect"));
+            });
+
+            newRow.querySelector(".removeStaffBtn").addEventListener("click", function () {
+                newRow.remove();
+            });
+        });
+    </script>
+}

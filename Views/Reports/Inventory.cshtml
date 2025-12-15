@@ -1,0 +1,49 @@
+﻿@model IEnumerable<PJ_P_Installation_Management_System.ViewModel.InventoryReportViewModel>
+
+@{
+    ViewData["Title"] = "Inventory Report";
+}
+
+<div class="container mt-4">
+    <div class="card shadow rounded-4 border-0">
+        <div class="card-body p-4">
+            <h2 class="mb-4 text-primary">
+                <i class="bi bi-box-seam"></i> Inventory Report
+            </h2>
+
+            <table class="table table-bordered table-hover shadow-sm">
+                <thead class="table-light">
+                    <tr>
+                        <th>Date Delivered</th>
+                        <th>Category</th>
+                        <th>Brand</th>
+                        <th>Total Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Any())
+                    {
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.DateDelivered.ToString("yyyy-MM-dd")</td>
+                                <td>@item.Category</td>
+                                <td>@item.Brand</td>
+                                <td>@item.Quantity</td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="4" class="text-center text-muted">
+                                No completed deliveries found.
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

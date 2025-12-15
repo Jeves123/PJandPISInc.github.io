@@ -1,0 +1,14 @@
+﻿@media print {
+    .sidebar, .navbar, .menu, footer {
+        display: none !important;
+    }
+
+    .container-fluid {
+        width: 100%;
+        position: static;
+    }
+
+        .container-fluid button, .container-fluid a {
+            display: none !important;
+        }
+}
